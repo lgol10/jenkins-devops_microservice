@@ -34,6 +34,7 @@ pipeline {
 			steps {
 					sh "mvn failsafe:integration-test failsafe:verify"
 			}
+		}
 		stage('Package') {
 			steps {
 					sh "mvn package -DskipTests"
@@ -69,5 +70,4 @@ pipeline {
 			echo 'I run when you fail'
 		}
 	}
-}
 }
